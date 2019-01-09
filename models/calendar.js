@@ -37,13 +37,13 @@ module.exports = function(sequelize, DataTypes) {
         },
     }); //end of var Calendar
 
-    Post.associate = function(models) {
-        Post.belongsTo(models.Users, {
-            foreignKey: {
-                allowNull: false
-            }, //end foreignKey
-        }) //end Post.belongsTo
-    }; //end Post.associate
+    // Calendar.associate = function(models) {
+    //     Calendar.belongsTo(models.Users, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }, //end foreignKey
+    //     }) //end Post.belongsTo
+    // }; //end Post.associate
 
     return Calendar;
 }; //end module.exports
