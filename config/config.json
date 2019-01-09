@@ -1,14 +1,14 @@
 {
     "development": {
       "username": "root",
-      "password": "password",
+      "password": "password", //change to bank or put in your password
       "database": "familyPlanner",
       "host": "localhost",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": "password",
+      "password": "password", //change to bank or put in your password
       "database": "familyPlanner",
       "host": "localhost",
       "dialect": "mysql",
