@@ -1,14 +1,18 @@
 {
     "development": {
       "username": "root",
+<<<<<<< HEAD
+      "password": "password", 
+=======
       "password": "",
+>>>>>>> master
       "database": "familyPlanner",
       "host": "localhost",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": "password",
+      "password": "password", 
       "database": "familyPlanner",
       "host": "localhost",
       "dialect": "mysql",
