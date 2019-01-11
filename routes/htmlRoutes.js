@@ -14,6 +14,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
+  app.get("/calendar", function(req, res) {
+    // If the user already has an account send them to the members page
+    res.sendFile(path.join(__dirname, "../public/calendarView.html"));
+  });
+
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -27,5 +32,16 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+  app.get("/editprofile", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/editprofile.html"));
+  });
 
+  app.get("/viewcalendar", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/viewcalendar.html"));
+  });
+  app.get("/addactivity", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/addactivity.html"));
+  });
+  
+  
 };

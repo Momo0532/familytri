@@ -1,15 +1,29 @@
 {
     "development": {
       "username": "root",
+<<<<<<< HEAD
       "password": "Colbert1070",
       "database": "familyplanningdb",
+=======
+<<<<<<< HEAD
+      "password": "password", 
+=======
+      "password": "",
+>>>>>>> master
+      "database": "familyPlanner",
+>>>>>>> d78ff491418eb80475f30516bbcf2b6c03b066e3
       "host": "localhost",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
+<<<<<<< HEAD
       "password": "Colbert1070",
       "database": "familyplanningdb",
+=======
+      "password": "password", 
+      "database": "familyPlanner",
+>>>>>>> d78ff491418eb80475f30516bbcf2b6c03b066e3
       "host": "localhost",
       "dialect": "mysql",
       "logging": false
