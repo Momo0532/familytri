@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calendar</title>
+  <meta charset="UTF-8">
+  
+  <link rel='stylesheet' href='../public/styles/fullcalendar.css' />
+  
+
+</head>
+
+<body>
+
+  <div id='calendar'></div>
+
+ 
+  <script type="text/javascript" src="../public/js/calendarView.js"></script>
+  
+  <script src='../fullCalendar/lib/jquery.min.js'></script>
+  <script src='../fullCalendar/lib/moment.min.js'></script>
+  <script src='../fullCalendar/fullcalendar.js'></script>
+  
+  <script>
+    $(document).ready(function() {
+
+// page is now ready, initialize the calendar...
+
+$('#calendar').fullCalendar({
+  views: {
+    basic: {
+      // options apply to basicWeek and basicDay views
+    },
+    agenda: {
+      // options apply to agendaWeek and agendaDay views
+    },
+    week: {
+      // options apply to basicWeek and agendaWeek views
+    },
+    day: {
+      // options apply to basicDay and agendaDay views
+    }
+  }
+});
+    });
+</script>
+
+</body>
+
+</html>
+
