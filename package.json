@@ -11,16 +11,21 @@
   },
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.14.2",
+    "fullcalendar": "^3.9.0",
+    "jquery": "^3.3.1",
     "mysql2": "^1.5.3",
+    "nodemon": "^1.18.9",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "bcrypt-nodejs": "0.0.3",
-    "sequelize": "^4.38.0"
+    "sequelize": "^4.38.0",
+    "uniq": "^1.0.1",
+    "webpack": "^4.28.4"
   },
   "devDependencies": {
     "chai": "^4.1.2",
