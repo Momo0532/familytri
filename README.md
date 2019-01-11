@@ -8,6 +8,10 @@ familytri
 
 ## 3- Wireframe 
 ### Description and images
+![alternate text](/screenshots/sign-up-form.png)
+#### This page is your sign up users need to sing up in this page and they give their information
+![alternate text](/screenshots/.png)
+#### This page...
 
 ## 4- Initial Configuration
 ### We use
@@ -23,11 +27,11 @@ familytri
 ## 5- Developing 
 ### We think as a group to develop our app to better service by....
 
-## 7- Appreciate
+## 7- Apprecation
 ### As a group of project 3 we wanted to appreciate David Hallinan for helping us through our team work. Also, Hannah and Glo. 
 
 ## 6- Authors
 ### Jason Villaluz, Ziman Zhang, Matthew Abrahamson, Allain Bernal, Ani Derboghosian.
 
-### 8- License 
+
 
