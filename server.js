@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-//take out force:tru when moving to production //
+//take out force:true when moving to production //
 db.sequelize.sync({force:true}).then(function() {
   app.listen(PORT, function() {
     console.log(

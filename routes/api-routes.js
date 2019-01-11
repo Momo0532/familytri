@@ -11,6 +11,7 @@ module.exports = function(app) {
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
     res.json("/members");
+////    res.json("/editprofile");
   });
 
 
@@ -21,7 +22,13 @@ module.exports = function(app) {
     console.log(req.body);
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      nameFirst: req.body.nameFirst,
+      nameLast: req.body.nameLast,
+      phone_home: req.body.phoneHome,
+      phone_cell: req.body.phoneCell,
+      date_of_birth: req.body.dateOfBirth
+      
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
@@ -31,12 +38,53 @@ module.exports = function(app) {
     });
   });
 
+
+  app.put("/api/update", function(req, res) {
+    // Update takes in an object describing the properties we want to update, and
+    // we use where to describe which objects we want to update
+    db.User.update({
+      nameFirst: req.body.firstName-input,
+      nameLast: req.body.nameLast-input
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbTodo) {
+      res.json(dbTodo);
+    });
+  });
+
+
+
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/");
   });
 
+  app.get("/api/editprofile/:id", function(req, res) {
+    db.User.findAll({
+        where: {
+          id: req.params.id
+        }
+      }).then(function(results) {
+        res.json(results);
+        consolelog("details",results);
+      });
+
+    
+  });
+
+  app.get("/api/viewcalendar", function(req, res) {
+   
+
+  });
+  app.get("/api/addactivity", function(req, res) {
+   
+
+  });
+
+  
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
@@ -49,6 +97,7 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id,
+        
         interests: ["movies", "sports", "fishing"]
       });
     }
