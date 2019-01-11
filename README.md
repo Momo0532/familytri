@@ -17,7 +17,7 @@ familytri
 4. [Bootstrap]
 5. [jQuery]
 6. [HTML/CSS]
-7. [ package.json]
+7. [package.json]
 8. [api-rout.js]
 
 ## 5- Developing 
