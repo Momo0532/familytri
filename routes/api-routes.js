@@ -37,6 +37,12 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
+  app.get("/api/calendar", function(req,res){
+    db.Event.findAll({}).then(function(eventData){
+      res.json(eventData)
+    })
+  })
+
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
