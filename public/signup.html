@@ -2,10 +2,15 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
   <meta charset="UTF-8">
+  <title>Passport Authentication</title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap Reference -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+
+  <!-- Dev Styles -->
   <link href="stylesheets/style.css" rel="stylesheet">
 </head>
 
@@ -13,9 +18,21 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
+        <div class='wrapperNav'>
+
+          <div id='appName'> <!-- App Name: Left Justified -->
+            <h1> FamliTri </h1>
+          </div> <!-- end of appName <div> -->
+    
+          <div id='login'> <!-- Sign Out Button: Right Justified -->  
+            <h5> Sign Out </h5>             
+          </div> <!-- end of login <div> -->
+            
+        </div>  <!-- end of wrapperNav <div> -->
       </div>
     </div>
   </nav>
+  
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -72,7 +89,7 @@
           <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
         <br />
-        <p>Or log in <a href="/login">here</a></p>
+        <!-- <p>Or log in <a href="/login">here</a></p> -->
       </div>
     </div>
   </div>

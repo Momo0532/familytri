@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Reference -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+    <!-- Dev Styles -->
+    <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+
+<body>
+    <!-- Nav Bar! -->
+    <div class='wrapperNav'>
+
+        <div id='appName'> <!-- App Name: Left Justified -->
+            <h1> FamliTri </h1>
+        </div> <!-- end of appName <div> -->
+
+        <div id='login'> <!-- Sign Out Button: Right Justified -->
+            <h5> Sign Out </h5> 
+        </div> <!-- end of login <div> -->
+
+    </div>  <!-- end of wrapperNav <div> -->
+
+    <div class='homeBody'>
+        <div id='familyCalendar'>
+            <!-- Should display the family calendar as a whole -->
+            <!-- If user is an Administrator, family calendar will include everyone's activities -->
+            <!-- If user is just a member, family calendar will ONLY include shared activities -->
+        </div>
+
+        <!-- If user is an Administrator of a Family -->
+        <!-- Regular family members will only be able to see the Family Calendar and Day View -->
+        <div id='adminOverview'>
+            <!-- Intended for administration overview -->
+            <!-- Adding, removing, editing, managing Family -->
+        </div>
+
+        <div id='dayView'>
+            <!-- Itemized list of the day's activities -->
+            <!-- dayView will take from personal calendar -->
+            <!-- Admins will be able to change views to another Family members and edit changes-->
+        </div>
+
+    </div> <!-- end homeBody <div> -->
+
+    <!-- SCRIPTS BELOW -->
+    <!-- -------------------------------------------------------- -->
+
+    <!-- jQuery Ref -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+
+    <!-- Popper Ref -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Ref -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"crossorigin="anonymous"></script>
+</body>
+
+</html>
