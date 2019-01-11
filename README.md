@@ -15,14 +15,14 @@ familytri
 
 ## 4- Initial Configuration
 ### We use
-1. [FullCalendar npm] to assist with the UI. 
-2. [Handelbars]
-3. [mysqul]
-4. [Bootstrap]
-5. [jQuery]
-6. [HTML/CSS]
-7. [package.json]
-8. [api-rout.js]
+1. [FullCalendar npm](https://fullcalendar.io/) to assist with the UI. 
+2. [Handelbars](https://handlebarsjs.com/)
+3. [mysql](https://www.mysql.com/)
+4. [Bootstrap](https://getbootstrap.com/)
+5. [jQuery](http://jquery.com/)
+6. [HTML/CSS](https://www.w3schools.com/html/html_css.asp)
+7. [package.json](https://flaviocopes.com/package-json/)
+8. [api-rout.js](https://expressjs.com/en/api.html)
 
 ## 5- Developing 
 ### We think as a group to develop our app to better service by....
