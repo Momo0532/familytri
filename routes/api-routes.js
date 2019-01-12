@@ -11,9 +11,8 @@ module.exports = function(app) {
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
     res.json("/members");
-////    res.json("/editprofile");
+    ////    res.json("/editprofile");
   });
-
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
@@ -28,33 +27,34 @@ module.exports = function(app) {
       phone_home: req.body.phoneHome,
       phone_cell: req.body.phoneCell,
       date_of_birth: req.body.dateOfBirth
-      
-    }).then(function() {
-      res.redirect(307, "/api/login");
-    }).catch(function(err) {
-      console.log(err);
-      res.json(err);
-      // res.status(422).json(err.errors[0].message);
-    });
+    })
+      .then(function() {
+        res.redirect(307, "/api/login");
+      })
+      .catch(function(err) {
+        console.log(err);
+        res.json(err);
+        // res.status(422).json(err.errors[0].message);
+      });
   });
-
 
   app.put("/api/update", function(req, res) {
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
-    db.User.update({
-      nameFirst: req.body.firstName-input,
-      nameLast: req.body.nameLast-input
-    }, {
-      where: {
-        id: req.body.id
+    db.User.update(
+      {
+        nameFirst: req.body.firstName - input,
+        nameLast: req.body.nameLast - input
+      },
+      {
+        where: {
+          id: req.body.id
+        }
       }
-    }).then(function(dbTodo) {
+    ).then(function(dbTodo) {
       res.json(dbTodo);
     });
   });
-
-
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
@@ -64,49 +64,38 @@ module.exports = function(app) {
 
   app.get("/api/editprofile/:id", function(req, res) {
     db.User.findAll({
-        where: {
-          id: req.params.id
-        }
-      }).then(function(results) {
-        res.json(results);
-        console.log("details",results);
-      });
-
-    
+      where: {
+        id: req.params.id
+      }
+    }).then(function(results) {
+      res.json(results);
+      console.log("details", results);
+    });
   });
 
-  app.get("/api/viewcalendar", function(req, res) {
-   
+  app.get("/api/viewcalendar", function(req, res) {});
+  app.get("/api/addactivity", function(req, res) {});
 
+  app.get("/api/calendar", function(req, res) {
+    db.Event.findAll({}).then(function(eventData) {
+      res.json(eventData);
+    });
   });
-  app.get("/api/addactivity", function(req, res) {
-   
-
-  });
-
-  
-  app.get("/api/calendar", function(req,res){
-    db.Event.findAll({}).then(function(eventData){
-      res.json(eventData)
-    })
-  })
 
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
-    }
-    else {
+    } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
         id: req.user.id,
-        
+
         interests: ["movies", "sports", "fishing"]
       });
     }
   });
-
 };
