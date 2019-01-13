@@ -5,18 +5,12 @@ module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     nameLast: {
       type: DataTypes.STRING,
-      allowNull: true,
-        validate: {
-          len: [1]
-        }
+      allowNull: true
     },
   
       nameFirst: {
         type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-          len: [1]
-        }
+        allowNull: true
       },
   
       email: {
@@ -32,58 +26,38 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }, 
       phone_home: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        validate: {
-          len: [10],
-          isNumeric: true //sets input to only accept numbers
-        }
+        type: DataTypes.STRING,
+        allowNull: true
       },
   
       phone_cell: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        validate: {
-          len: [10],
-          isNumeric: true ///sets input to only accept numbers
-        }
+        type: DataTypes.STRING,
+        allowNull: true
       },
   
       address_street: {
         type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-          len: [1]
-        } 
+        allowNull: true
       },
   
       address_aptNum: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: true
       },
   
       address_city: {
         type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-          len: [1,30]
-        }
+        allowNull: true
       },
   
       address_state: {
         type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-          len: [1]
-        }
+        allowNull: true
       },
   
       address_zip: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        validate: {
-          len: [5]
-        }
+        type: DataTypes.STRING,
+        allowNull: true
       },
   
       admin: {
@@ -98,14 +72,12 @@ module.exports = function(sequelize, DataTypes) {
   
       school_name: {
         type: DataTypes.STRING,
-        allowNull: true, //set to true due to fact that not every user is a child
-        len: [1]
+        allowNull: true
       },
   
       date_of_birth: {
         type: DataTypes.STRING,
-        allowNull: true,
-        isDate: true
+        allowNull: true
       } 
   
     }); //end of var Users
