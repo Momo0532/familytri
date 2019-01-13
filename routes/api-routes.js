@@ -30,6 +30,7 @@ module.exports = function(app) {
       date_of_birth: req.body.dateOfBirth
       
     }).then(function() {
+      console.log("hello")
       res.redirect(307, "/api/login");
     }).catch(function(err) {
       console.log(err);
