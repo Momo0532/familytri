@@ -27,15 +27,15 @@ module.exports = function(app) {
       phone_home: req.body.phoneHome,
       phone_cell: req.body.phoneCell,
       date_of_birth: req.body.dateOfBirth
-    })
-      .then(function() {
-        res.redirect(307, "/api/login");
-      })
-      .catch(function(err) {
-        console.log(err);
-        res.json(err);
-        // res.status(422).json(err.errors[0].message);
-      });
+      
+    }).then(function() {
+      console.log("hello")
+      res.redirect(307, "/api/login");
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+      // res.status(422).json(err.errors[0].message);
+    });
   });
 
   app.put("/api/update", function(req, res) {
