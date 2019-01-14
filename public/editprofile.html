@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Edit Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <div class="navbar-header">
+              <h1>FamLI TRI</h1>
+              family planning and event tracker app<br>
+              <a class="navbar-brand" href="/logout">
+                Logout
+              </a>
+              <a class="navbar-brand" href="/members">
+                Home
+              </a>
+              <a class="navbar-brand" href="/calendar">
+                View Calendar
+              </a>
+              <a class="navbar-brand" href="/addactivity">
+                Add Activity
+              </a>
+              <a class="navbar-brand" href="/editprofile">
+                Edit Profile
+              </a>
+            </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Edit Profile </h2>
+        <form class="edit">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <span class="member-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName-input" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName-input" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <label for="date_of_birth">Date of Birth</label>
+            <input type="text" class="form-control" id="date_of_birth-input" placeholder="Date of Birth">
+          </div>
+          <div class="form-group">
+            <label for="phonenumberhome">Home Phone</label>
+            <input type="text" class="form-control" id="phone_home-input" placeholder="Home Phone">
+          </div>
+          <div class="form-group">
+            <label for="phonenumbercell">Cell Phone</label>
+            <input type="text" class="form-control" id="phone_cell-input" placeholder="Cell Phone">
+          </div>
+          <div class="form-group">
+            <label for="address_street">Street Address</label>
+            <input type="text" class="form-control" id="address_street-input" placeholder="Address Street">
+          </div>
+          <div class="form-group">
+            <label for="address_aptNum">Apt Number</label>
+            <input type="text" class="form-control" id="address_aptNum-input" placeholder="Apt Number">
+          </div>
+          <div class="form-group">
+            <label for="address_city">City</label>
+            <input type="text" class="form-control" id="address_city-input" placeholder="City">
+          </div>
+          <div class="form-group">
+            <label for="address_state">State</label>
+            <input type="text" class="form-control" id="address_state-input" placeholder="State">
+          </div>
+          <div class="form-group">
+            <label for="address_zip">Zip</label>
+            <input type="text" class="form-control" id="address_zip-input" placeholder="Zip Code">
+          </div>
+          <div class="form-group">
+            <label for="School">School</label>
+            <input type="text" class="form-control" id="school-input" placeholder="School">
+          </div>
+          <div class="form-group">
+            <label for="admin">Administrator</label>
+            <input type="Radio" id="admin_admin-input" value="1">Yes&nbsp;
+            <input type="Radio" id="admin_admin-input" value="0">No
+          </div>
+          <div class="form-group">
+            <label for="child">Child</label>
+            <input type="Radio" id="child-input" value="1">Yes&nbsp;
+            <input type="Radio" id="child-input" value="0">No
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-default" id="Add">Add Individual</button><button type="submit" class="btn btn-default" id="Update">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
+
+</body>
+
+</html>

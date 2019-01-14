@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Passport Authentication</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header"><h1>FamLI TRI</h1>
+          family planning and event tracker app
+  
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Sign Up Form</h2>
+        <form class="signup">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName-input" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName-input" placeholder="Last Name">
+            </div>
+
+          <div class="form-group">
+              <label for="date_of_birth">Date of Birth</label>
+              <input type="text" class="form-control" id="date_of_birth-input" placeholder="Date of Birth">
+            </div>
+            <div class="form-group">
+              <label for="phonenumberhome">Home Phone</label>
+              <input type="text" class="form-control" id="phone_home-input" placeholder="Home Phone">
+            </div>
+            <div class="form-group">
+              <label for="phonenumbercell">Cell Phone</label>
+              <input type="text" class="form-control" id="phone_cell-input" placeholder="Cell Phone">
+            </div>
+            <div class="form-group">
+              <label for="School">School</label>
+              <input type="text" class="form-control" id="school-input" placeholder="School">
+            </div>
+            <div class="form-group">
+              <label for="admin">Administrator</label>
+              <input type="Radio" id="admin-input" value="1">Yes&nbsp;
+              <input type="Radio" id="admin-input" value="0">No
+            </div>
+            <div class="form-group">
+              <label for="child">Child</label>
+              <input type="Radio" id="child-input" value="1">Yes&nbsp;
+              <input type="Radio" id="child-input" value="0">No
+            </div>
+  
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+        <br />
+        <p>Or log in <a href="/login">here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
+
+</body>
+
+</html>
