@@ -76,14 +76,81 @@ module.exports = function(app) {
     
   });
 
-  app.get("/api/viewcalendar", function(req, res) {
-   
-
+  app.get("/api/family", function(req, res) {
+    db.Users.findAll({
+      include: [db.Calendar.activity_name, db.Calendar.activity_date, db.Calendar.location_street, db.Calendar.location]
+    }).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
   });
-  app.get("/api/addactivity", function(req, res) {
-   
+  // app.get("/api/activity", function(req, res) {
+  //   db.Calendar.findAll({
+  //     include: [db.Users.nameFirst, db.Users.nameLast]
+  //   }).then(function(dbCalendar) {
+  //     res.json(dbCalendar);
+  //   });
+  // });
 
+
+  app.get("/api/activity/:id", function(req, res) {
+    db.Users.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.Calendar]
+    }).then(function(response) {
+      
+      res.json(dbCalendar);
+    });
   });
+
+  app.get("/api/activity/:id", function(req, res) {
+    db.Users.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.Calendar]
+    }).then(function(response) {
+      
+      res.json(dbCalendar);
+    });
+  });
+  app.get("/api/:activity_date", function(req, res) {
+    db.Calendar.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.Users]
+    }).then(function(response) {
+      
+      res.json(dbCalendar);
+    });
+  });
+
+  // Create a new example
+  app.post("/api/addChild/:id", function(req, res) {
+    db.Users.create(req.body).then(function(dbUsers) {
+      res.json(dbExample);
+    });
+  });
+  app.post("/api/addActivity/:id", function(req, res) {
+    db.calendar.create(req.body).then(function(dbCalendar) {
+      res.json(dbCalendar);
+    });
+  });
+
+  // Delete an example by id
+  app.delete("/api/deleteChild/:id", function(req, res) {
+    db.users.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+      res.json(dbusers);
+    });
+  });
+  app.delete("/api/deleteActivity/:id", function(req, res) {
+    db.calendar.destroy({ where: { id: req.params.id } }).then(function(dbCalendar) {
+      res.json(dbCalendar);
+    });
+  });
+
 
   
   app.get("/api/calendar", function(req,res){
@@ -111,3 +178,6 @@ module.exports = function(app) {
   });
 
 };
+
+
+
