@@ -1,17 +1,24 @@
-# familytri-TRI
-familytri
+# famLI TRI
+
 ## 1- Over View / Background
-### This is Berkeley Boot Camp (familytri) project 2 that We provide an all-in-one calendar/scheduling app for all your family’s needs.   We track your schedule, your partners as well as all of your kids.   Breaking areas down into people and activities so only the ones you need to know about will show up for you
+### This is Berkeley Boot Camp (FamLI TRI) project 2 that We provide an all-in-one calendar/scheduling app for all your family’s needs.   We track your schedule, your partners as well as all of your kids.   Breaking areas down into people and activities so only the ones you need to know about will show up for you
 
 ## 2- Installing / Getting started
-### this app is so easy user for our all users. you just need to type this commend [npm install] and you need to set up your account. A quick introduction of the minimal setup you need to get a familytri & running/What things you need to install the software and how to install them (give an examples). 
+### this app is designed to be easy user for our users. You just need to type this command `npm install` and then set up your account. This is a quick introduction to the setup you need to get our app famLI TRI running. 
 
-## 3- Wireframe 
-### Description and images
+## 3- Description
+### Able to track location, cost, attendees & time all in one place. Seamlessly integrates your schedule with that of your partner and children. Everyone has unique sign in.  Parents can edit their children’s schedule.Displays on a calendar you can control as needed. Visually represents schedule conflicts so they can be dealt with ahead of time.
+
 ![alternate text](/screenshots/sign-up-form.png)
-#### This page is your sign up users need to sing up in this page and they give their information
-![alternate text](/screenshots/.png)
-#### This page...
+#### New user sign up form.  
+![alternate text](/screenshots/calendar-demo-stock.PNG)
+#### Here is a view of a full month showing all of your schedule.   You can also change your view to show just a single week or a single day.  
+![alternate text](/screenshots/add-event.png) 
+#### Here you can add events.
+![alternate text](/screenshots/log-in-form.png)
+#### Login Page.
+![alternate text](/screenshots/edit-profile.png)
+#### You can edit users in the edit profile page.
 
 ## 4- Initial Configuration
 ### We use
@@ -25,12 +32,12 @@ familytri
 8. [api-rout.js](https://expressjs.com/en/api.html)
 
 ## 5- Developing 
-### We think as a group to develop our app to better service by....
+### Allow users the ability to upload pictures and make a card. Notifications for upcoming events and activities Google People API integration for data migration to autofill required fields during setup. Geolocation sent to family admin at the time of activity starting .Integration with outside institutions/apps for more functionality. Integration with other calendar programs to auto import your currently scheduled events.Provide a comprehensive calendar/scheduling system for the immediate family.Utilize a full-stack development environment to carryout the app’s requirements.
 
 ## 7- Apprecation
-### As a group of project 3 we wanted to appreciate David Hallinan for helping us through our team work. Also, Hannah and Glo. 
+### As a group of project 3 we wanted to give a special thanks to David Hallinan for helping us with our groups work. Same to you Hannah and Glo. 
 
-## 6- Authors
+## 6- Authors.0
 ### Jason Villaluz, Ziman Zhang, Matthew Abrahamson, Allain Bernal, Ani Derboghosian.
 
 
